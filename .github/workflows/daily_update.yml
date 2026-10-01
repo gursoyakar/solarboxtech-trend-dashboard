@@ -1,8 +1,8 @@
-name: Daily YouTube Trend Update
+name: Daily YouTube RSS Dashboard Update
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: "0 5 * * *" # 08:00 Europe/Istanbul (UTC+3)
   workflow_dispatch:
 
 permissions:
@@ -12,38 +12,68 @@ jobs:
   update-dashboard:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Scrape Competitor YouTube Data
-        env:
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      - name: Fetch free YouTube RSS feeds
         run: |
-          echo "Starting daily Apify scraping..."
-          python3 -c "
-          import urllib.request, json, os
-          token = os.environ['APIFY_TOKEN']
-          datasets = {
-              'willprowse': 'IeJ2RYJCr4C7jSxTd',
-              'theresatrickforthat': 'AiEDfFu7ejnwGpOqw',
-              'thesolarlab': '9TJHnLrXPkzVQc3UZ'
+          python3 - <<'PY'
+          import json
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+
+          feeds = [
+              ("Two Bit da Vinci", "UCEgYhf84VjXDz-W7a9-rdCQ"),
+              ("Undecided with Matt Ferrell", "UCjtUS7-SZTi6pXjUbzGHQCg"),
+              ("Kanal 3", "UCJYDHsZ0aYyjz5Csi_aZ2Eg"),
+              ("Kanal 4", "UC8NjzyxPby9k0oIc1yL8xRg"),
+              ("Ziroth Tech", "UCezOhPRojzE_Du7XQodCKxQ"),
+          ]
+          atom = "{http://www.w3.org/2005/Atom}"
+          yt = "{http://www.youtube.com/xml/schemas/2015}"
+          videos = []
+
+          for channel_name, channel_id in feeds:
+              url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+              request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  feed = ET.fromstring(response.read())
+              found = 0
+              for entry in feed.findall(atom + "entry"):
+                  title = entry.findtext(atom + "title", default="").strip()
+                  video_id = entry.findtext(yt + "videoId", default="").strip()
+                  published = entry.findtext(atom + "published", default="").strip()
+                  if title and video_id:
+                      videos.append({
+                          "channel": channel_name,
+                          "title": title,
+                          "url": f"https://www.youtube.com/watch?v={video_id}",
+                          "published": published,
+                      })
+                      found += 1
+              print(f"{channel_name}: {found} videos")
+              if not found:
+                  raise RuntimeError(f"No RSS videos returned for {channel_name}")
+
+          videos.sort(key=lambda video: video["published"], reverse=True)
+          payload = {
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "source": "YouTube public RSS feeds; view and subscriber counts are not included",
+              "videos": videos,
           }
-          for name, ds_id in datasets.items():
-              url = f'https://api.apify.com/v2/datasets/{ds_id}/items?format=json&clean=true'
-              try:
-                  req = urllib.request.Request(url, headers={'Authorization': f'Bearer {token}', 'User-Agent': 'Mozilla/5.0'})
-                  with urllib.request.urlopen(req) as resp:
-                      data = json.loads(resp.read().decode('utf-8'))
-                      with open(f'{name}_data.json', 'w', encoding='utf-8') as f:
-                          json.dump(data, f, ensure_ascii=False, indent=2)
-                      print(f'Updated {name}: {len(data)} videos')
-              except Exception as e:
-                  print(f'Error {name}: {e}')
-          "
+          with open("rss_data.json", "w", encoding="utf-8") as output:
+              json.dump(payload, output, ensure_ascii=False, indent=2)
+          PY
 
-      - name: Commit and Push Updates
+      - name: Commit dashboard data
         run: |
-          git config --global user.name "SolarBoxtech Bot"
-          git config --global user.email "bot@solarboxtech.com"
-          git add .
-          git diff-index --quiet HEAD || (git commit -m "Auto-update trend dashboard [skip ci]" && git push)
+          git config user.name "SolarBoxtech Bot"
+          git config user.email "bot@solarboxtech.com"
+          git add rss_data.json
+          if git diff --cached --quiet; then
+            echo "RSS data unchanged"
+          else
+            git commit -m "Update dashboard from free YouTube RSS"
+            git push
+          fi
