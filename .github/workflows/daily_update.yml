@@ -5,6 +5,9 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-dashboard:
     runs-on: ubuntu-latest
@@ -13,20 +16,22 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Scrape Competitor YouTube Data
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
           echo "Starting daily Apify scraping..."
           python3 -c "
-          import urllib.request, json, base64
-          token = base64.b64decode('YXBpZnlfYXBpX2JxZDluaEV3S2FhOHZEOURERENRSjVjRUZwcHNHMTA5YWlpQg==').decode('utf-8')
+          import urllib.request, json, os
+          token = os.environ['APIFY_TOKEN']
           datasets = {
               'willprowse': 'IeJ2RYJCr4C7jSxTd',
               'theresatrickforthat': 'AiEDfFu7ejnwGpOqw',
               'thesolarlab': '9TJHnLrXPkzVQc3UZ'
           }
           for name, ds_id in datasets.items():
-              url = f'https://api.apify.com/v2/datasets/{ds_id}/items?token={token}&format=json&clean=true'
+              url = f'https://api.apify.com/v2/datasets/{ds_id}/items?format=json&clean=true'
               try:
-                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                  req = urllib.request.Request(url, headers={'Authorization': f'Bearer {token}', 'User-Agent': 'Mozilla/5.0'})
                   with urllib.request.urlopen(req) as resp:
                       data = json.loads(resp.read().decode('utf-8'))
                       with open(f'{name}_data.json', 'w', encoding='utf-8') as f:
