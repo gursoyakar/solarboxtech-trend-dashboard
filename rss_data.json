@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-10-06T11:54:33.462718+00:00",
+  "generated_at": "2026-10-07T11:39:15.936990+00:00",
   "source": "YouTube public RSS feeds; view and subscriber counts are not included",
   "videos": [
+    {
+      "channel": "Ziroth Tech",
+      "title": "Engineers Built The Ultimate Sleep System #AD",
+      "url": "https://www.youtube.com/watch?v=DxXFPkLcNWo",
+      "published": "2026-10-07T10:45:16+00:00"
+    },
+    {
+      "channel": "Kanal 3",
+      "title": "This $149 COSTCO Power Box Stores 30kWh for Your Home — No Lithium NEEDED!!",
+      "url": "https://www.youtube.com/watch?v=r2hAeukm72s",
+      "published": "2026-10-06T15:06:09+00:00"
+    },
+    {
+      "channel": "Undecided with Matt Ferrell",
+      "title": "Solar Panels Are Doing Something Nobody Expected",
+      "url": "https://www.youtube.com/watch?v=kcQ7n9-hkRU",
+      "published": "2026-10-06T12:17:00+00:00"
+    },
     {
       "channel": "Kanal 4",
       "title": "This $119 Amazon Battery Runs Your WHOLE House? (The Truth)",
@@ -237,12 +255,6 @@
       "published": "2026-09-15T12:16:55+00:00"
     },
     {
-      "channel": "Kanal 3",
-      "title": "This $45 Harbor Freight Part Replaces $2,200 Power Stations (Nobody Tells You This)",
-      "url": "https://www.youtube.com/watch?v=KBjnxaTu9-o",
-      "published": "2026-09-14T16:59:26+00:00"
-    },
-    {
       "channel": "Two Bit da Vinci",
       "title": "America's War On Residential Solar - What You Need To Know",
       "url": "https://www.youtube.com/watch?v=1nvhe2h82hY",
@@ -405,12 +417,6 @@
       "published": "2026-07-30T12:17:30+00:00"
     },
     {
-      "channel": "Undecided with Matt Ferrell",
-      "title": "How Quantum Batteries Break Every Rule of Charging",
-      "url": "https://www.youtube.com/watch?v=d50tSWgXDtw",
-      "published": "2026-07-28T12:16:55+00:00"
-    },
-    {
       "channel": "Ziroth Tech",
       "title": "This Jet is 100% Electric - It's Transforming an Industry",
       "url": "https://www.youtube.com/watch?v=PtzIWmM949s",
@@ -445,12 +451,6 @@
       "title": "F1 Battery Pack Engineering for your Bed!",
       "url": "https://www.youtube.com/watch?v=tx75_w5SqAg",
       "published": "2026-05-01T09:58:27+00:00"
-    },
-    {
-      "channel": "Ziroth Tech",
-      "title": "This Insane Battery Just Ended The Combustion Engine",
-      "url": "https://www.youtube.com/watch?v=59jSCWHZm4Y",
-      "published": "2026-04-29T11:38:03+00:00"
     }
   ]
 }
