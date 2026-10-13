@@ -1,7 +1,19 @@
 {
-  "generated_at": "2026-10-12T12:57:22.078732+00:00",
+  "generated_at": "2026-10-13T12:34:23.125641+00:00",
   "source": "YouTube public RSS feeds; view and subscriber counts are not included",
   "videos": [
+    {
+      "channel": "Undecided with Matt Ferrell",
+      "title": "After Years of Perovskite Promises, Does This One Deliver?",
+      "url": "https://www.youtube.com/watch?v=kriIXJkoyBs",
+      "published": "2026-10-13T12:16:55+00:00"
+    },
+    {
+      "channel": "Kanal 3",
+      "title": "This $299 Plug-In Solar Panel Cuts Your Power Bill in Half — No Electrician NEEDED!!",
+      "url": "https://www.youtube.com/watch?v=__6S1h4uMYQ",
+      "published": "2026-10-12T18:53:28+00:00"
+    },
     {
       "channel": "Kanal 4",
       "title": "Don't Buy a Generator Until You See This $135 Engine Test",
@@ -249,12 +261,6 @@
       "published": "2026-09-24T10:45:02+00:00"
     },
     {
-      "channel": "Kanal 3",
-      "title": "How to Make a Generator at Home That Never Needs Fuel (No Gas Needed)",
-      "url": "https://www.youtube.com/watch?v=QuojXH6R63o",
-      "published": "2026-09-23T19:47:26+00:00"
-    },
-    {
       "channel": "Two Bit da Vinci",
       "title": "Huawei's AI Breakthrough Saves Kilowatts of Power",
       "url": "https://www.youtube.com/watch?v=vngfjfgffH0",
@@ -397,12 +403,6 @@
       "title": "The Rare Earth Replacement Magnets Are Waiting For",
       "url": "https://www.youtube.com/watch?v=qR1pxEPqZJM",
       "published": "2026-08-06T12:17:32+00:00"
-    },
-    {
-      "channel": "Undecided with Matt Ferrell",
-      "title": "Are Rare Earth Magnets About to Become Obsolete?",
-      "url": "https://www.youtube.com/watch?v=UGxebJSUrTs",
-      "published": "2026-08-04T12:16:52+00:00"
     },
     {
       "channel": "Ziroth Tech",
