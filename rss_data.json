@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-11-04T12:52:18.388055+00:00",
+  "generated_at": "2026-11-05T13:00:36.541856+00:00",
   "source": "YouTube public RSS feeds; view and subscriber counts are not included",
   "videos": [
+    {
+      "channel": "Kanal 4",
+      "title": "10 Dollar General Items Renters Should Stock BEFORE the Next Blackout",
+      "url": "https://www.youtube.com/watch?v=7aYC8U8CgpU",
+      "published": "2026-11-05T12:40:38+00:00"
+    },
+    {
+      "channel": "Kanal 3",
+      "title": "STOP Buying $5000 Solar System! This $399 COSTCO Kit Runs a Cabin All Winter (Nobody Tells You This)",
+      "url": "https://www.youtube.com/watch?v=gV8d-4jfJEo",
+      "published": "2026-11-04T20:20:56+00:00"
+    },
+    {
+      "channel": "Ziroth Tech",
+      "title": "Are We Building Small Wind Turbines Wrong?",
+      "url": "https://www.youtube.com/watch?v=oUxRs9vvbmk",
+      "published": "2026-11-04T15:01:40+00:00"
+    },
     {
       "channel": "Kanal 3",
       "title": "STOP Buying GENERAC Generators! This $800 Power Station Outlasts $5,000 Generators",
@@ -16,7 +34,7 @@
     },
     {
       "channel": "Undecided with Matt Ferrell",
-      "title": "Why Most Battery Breakthroughs Fail",
+      "title": "A Battery Made of Sand Is Now Heating a Town",
       "url": "https://www.youtube.com/watch?v=J5RdPNC48dw",
       "published": "2026-11-03T13:16:45+00:00"
     },
@@ -165,12 +183,6 @@
       "published": "2026-10-19T09:49:56+00:00"
     },
     {
-      "channel": "Kanal 3",
-      "title": "This $60 AutoZone Alternator Replaces a $2,500 Generator? ( Nobody Tells You )",
-      "url": "https://www.youtube.com/watch?v=0fT5f5RVJvY",
-      "published": "2026-10-18T17:08:57+00:00"
-    },
-    {
       "channel": "Kanal 4",
       "title": "STOP Paying $400 Power Bills. This $25 Thrift Store Find Heats Any Room All Winter!!",
       "url": "https://www.youtube.com/watch?v=uo1fVOWoGug",
@@ -229,12 +241,6 @@
       "title": "This $139 EBAY Battery Pack Runs Your Whole House on FREE Grid Power — No Solar NEEDED!",
       "url": "https://www.youtube.com/watch?v=S84yTisoMVQ",
       "published": "2026-10-10T19:32:36+00:00"
-    },
-    {
-      "channel": "Kanal 4",
-      "title": "This $33 Aluminum Panel Pushes Heat Into My Bedroom on a 20°F Morning (No Furnace)",
-      "url": "https://www.youtube.com/watch?v=1VdAmM8kjsQ",
-      "published": "2026-10-09T16:55:17+00:00"
     },
     {
       "channel": "Undecided with Matt Ferrell",
@@ -445,12 +451,6 @@
       "title": "This Blade Battery Charges Insanely Fast!",
       "url": "https://www.youtube.com/watch?v=myYsB0ICATQ",
       "published": "2026-06-15T09:22:20+00:00"
-    },
-    {
-      "channel": "Ziroth Tech",
-      "title": "Exposing The Solid State Donut Battery. It's Over.",
-      "url": "https://www.youtube.com/watch?v=j5oyVNjrUPI",
-      "published": "2026-06-08T11:56:54+00:00"
     }
   ]
 }
