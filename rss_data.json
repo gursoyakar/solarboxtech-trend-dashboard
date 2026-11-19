@@ -1,7 +1,19 @@
 {
-  "generated_at": "2026-11-18T13:45:36.347440+00:00",
+  "generated_at": "2026-11-19T14:14:29.127703+00:00",
   "source": "YouTube public RSS feeds; view and subscriber counts are not included",
   "videos": [
+    {
+      "channel": "Kanal 3",
+      "title": "This $35 Amazon Part Replaces a $2,600 Propane Tank Heater for Your Shed (Here’s the Test)",
+      "url": "https://www.youtube.com/watch?v=KfefcuwykUY",
+      "published": "2026-11-19T12:24:59+00:00"
+    },
+    {
+      "channel": "Ziroth Tech",
+      "title": "How This Tiny 1000hp Motor Kills Its Own Noise",
+      "url": "https://www.youtube.com/watch?v=bBgceD9JrDc",
+      "published": "2026-11-19T11:35:31+00:00"
+    },
     {
       "channel": "Kanal 4",
       "title": "This $299 German Battery Beats A $1,200 Generator For Overnight Power. Why Aren’t We Using Them?!”",
@@ -181,12 +193,6 @@
       "title": "A Battery Made of Sand Is Now Heating a Town",
       "url": "https://www.youtube.com/watch?v=J5RdPNC48dw",
       "published": "2026-11-03T13:16:45+00:00"
-    },
-    {
-      "channel": "Kanal 3",
-      "title": "This $135 Blackout Kit Gets Me Through Every Winter Blackout — No Generator NEEDED!!",
-      "url": "https://www.youtube.com/watch?v=oGp6Z390_I4",
-      "published": "2026-11-03T12:05:39+00:00"
     },
     {
       "channel": "Undecided with Matt Ferrell",
@@ -445,12 +451,6 @@
       "title": "The LFP Battery 2.0 Just Broke The Limits",
       "url": "https://www.youtube.com/watch?v=UK8M1Z2IH4E",
       "published": "2026-07-01T10:58:56+00:00"
-    },
-    {
-      "channel": "Ziroth Tech",
-      "title": "This Blade Battery Charges Insanely Fast!",
-      "url": "https://www.youtube.com/watch?v=myYsB0ICATQ",
-      "published": "2026-06-15T09:22:20+00:00"
     }
   ]
 }
